@@ -1,0 +1,18 @@
+# Uncomment the next line to define a global platform for your project
+# platform :ios, '9.0'
+
+target 'Module Comunication' do
+  # Comment the next line if you don't want to use dynamic frameworks
+  use_frameworks!
+
+   # Explicitly include Yoga if you are using RN >= 0.42.0
+#   pod "Yoga", :path => "../no5TFCGV 2`de_modules/react-native/ReactCommon/yoga"
+
+   # Third party deps podspec link
+   
+  target 'Module ComunicationTests' do
+    inherit! :search_paths
+    # Pods for testing
+  end
+
+end
