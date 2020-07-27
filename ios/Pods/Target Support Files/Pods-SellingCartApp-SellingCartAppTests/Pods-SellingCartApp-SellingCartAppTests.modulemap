@@ -1,0 +1,6 @@
+module Pods_SellingCartApp_SellingCartAppTests {
+  umbrella header "Pods-SellingCartApp-SellingCartAppTests-umbrella.h"
+
+  export *
+  module * { export * }
+}
