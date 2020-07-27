@@ -1,0 +1,53 @@
+apply plugin: 'com.android.application'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-android-extensions'
+apply from: rootProject.file("versions.gradle")
+
+android {
+    compileSdkVersion versions.compileSdk
+    buildToolsVersion versions.buildTools
+
+    defaultConfig {
+        minSdkVersion versions.minSdk
+        targetSdkVersion versions.targetSdk
+        versionCode versions.projectVersionCode
+        versionName versions.projectVersionName
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+        consumerProguardFiles "consumer-rules.pro"
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            testCoverageEnabled true
+        }
+        release {
+            minifyEnabled true
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    sourceSets {
+        main.java.srcDirs += 'src/main/kotlin'
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar"])
+    implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
+    implementation "androidx.core:core-ktx:$versions.coreKtx"
+    implementation "androidx.appcompat:appcompat:$versions.androidXAppcompat"
+    implementation "com.natura.android:designsystem:$versions.designSystem"
+    implementation "com.google.android.material:material:$versions.material"
+    implementation "androidx.constraintlayout:constraintlayout:$versions.constraintLayout"
+
+    testImplementation "com.natura.android:testcommons:$versions.testCommons"
+    testImplementation "junit:junit:$versions.junit"
+    testImplementation "org.junit.jupiter:junit-jupiter-api:$versions.jupiterVersion"
+    testRuntimeOnly "org.junit.jupiter:junit-jupiter-engine:$versions.jupiterVersion"
+    testRuntimeOnly "org.junit.vintage:junit-vintage-engine:$versions.jupiterVersion"
+    androidTestImplementation "androidx.test.ext:junit:$versions.androidXJunit"
+    androidTestImplementation "androidx.test.espresso:espresso-core:$versions.espressoCore"
+    androidTestImplementation "com.natura.android:testcommons:$versions.testCommons"
+}
