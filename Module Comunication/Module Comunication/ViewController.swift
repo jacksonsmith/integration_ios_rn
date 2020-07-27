@@ -7,19 +7,20 @@
 //
 
 import UIKit
+//import SellingCart
 
 class ViewController: UIViewController {
     
-    @IBOutlet weak var label: UILabel!
+    @IBOutlet weak var button: UIButton!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
-        label.text = "Change Text"
-        // Do any additional setup after loading the view.
     }
-
-
+    
+    
+    @IBAction func didTapButton(_ sender: Any) {
+//        print("Agora vai")
+//        StartSellingCart()
+    }
 }
 
