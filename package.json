@@ -3,6 +3,8 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
+    "build-ios-bundle": "react-native bundle --entry-file='index.js' --bundle-output='./ios/index.ios.bundle' --dev=false --platform='ios' --assets-dest='./ios/Pod/Assets/'",
+    "build-android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/library/src/main/assets/index.android.bundle --assets-dest android/library/src/main/res",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
     "start": "react-native start",
