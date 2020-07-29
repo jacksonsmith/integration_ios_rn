@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build-ios-bundle": "react-native bundle --entry-file='index.js' --bundle-output='./ios/Pod/assets/index.ios.jsbundle' --dev=false --platform='ios' --assets-dest='./ios/Pod/assets/'",
+    "build-ios-bundle": "react-native bundle --entry-file='index.js' --bundle-output='./ios/index.ios.jsbundle' --dev=false --platform='ios' --assets-dest='./ios/'",
     "build-android-bundle": "react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/SellingCartLibrary/src/main/assets/index.android.bundle --assets-dest android/SellingCartLibrary/src/main/res",
     "android": "react-native run-android",
     "ios": "react-native run-ios",
