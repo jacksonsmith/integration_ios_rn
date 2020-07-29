@@ -10,10 +10,8 @@ Pod::Spec.new do |s|
     s.source_files = "ios/SellingCartApp/**/*.{swift,h,m}"
     s.ios.deployment_target  = '10.0'
 
-    s.resources = ['ios/index.ios.jsbundle',
-                 'ios/assets/*',
-                 'ios/SellingCartApp/Images.xcassets/']
-
+    s.resources = 'ios/Pod/assets/*'
+  
     s.dependency 'React'
     s.dependency 'React-Core'
     s.dependency 'React-CoreModules'
