@@ -12,7 +12,6 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		24A2525531F07B8C8F6CAC75 /* libPods-SellingCartApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 42A620C43D7A0F7F8130D12C /* libPods-SellingCartApp.a */; };
-		2654D96324D08FA600731FE8 /* ModuleSellingCartApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2654D96224D08FA600731FE8 /* ModuleSellingCartApp.swift */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
@@ -54,8 +53,6 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = SellingCartApp/Info.plist; sourceTree = "<group>"; };
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = SellingCartApp/main.m; sourceTree = "<group>"; };
 		14419A25F4004ED60A7423A6 /* Pods-SellingCartApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SellingCartApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-SellingCartApp-tvOS/Pods-SellingCartApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
-		2654D96124D08FA600731FE8 /* SellingCartApp-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SellingCartApp-Bridging-Header.h"; sourceTree = "<group>"; };
-		2654D96224D08FA600731FE8 /* ModuleSellingCartApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleSellingCartApp.swift; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* SellingCartApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "SellingCartApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* SellingCartApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "SellingCartApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		42A620C43D7A0F7F8130D12C /* libPods-SellingCartApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SellingCartApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -135,8 +132,6 @@
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
-				2654D96224D08FA600731FE8 /* ModuleSellingCartApp.swift */,
-				2654D96124D08FA600731FE8 /* SellingCartApp-Bridging-Header.h */,
 			);
 			name = SellingCartApp;
 			sourceTree = "<group>";
@@ -573,7 +568,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */,
-				2654D96324D08FA600731FE8 /* ModuleSellingCartApp.swift in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -615,7 +609,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = D1277F68F5BF8FD9B677E2BB /* Pods-SellingCartApp-SellingCartAppTests.debug.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
@@ -639,7 +632,6 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 7BE5BF69CE862FCDC7375C98 /* Pods-SellingCartApp-SellingCartAppTests.release.xcconfig */;
 			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
 				INFOPLIST_FILE = SellingCartAppTests/Info.plist;
