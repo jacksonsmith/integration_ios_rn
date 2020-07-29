@@ -12,4 +12,19 @@ Pod::Spec.new do |s|
 
     s.resources = 'ios/Pod/Assets/*'
 
+    s.dependency 'React'
+    s.dependency 'React-Core'
+    s.dependency 'React-CoreModules'
+    s.dependency 'React-Core/DevSupport'
+    s.dependency 'React-RCTActionSheet'
+    s.dependency 'React-RCTAnimation'
+    s.dependency 'React-RCTBlob'
+    s.dependency 'React-RCTImage'
+    s.dependency 'React-RCTLinking'
+    s.dependency 'React-RCTNetwork'
+    s.dependency 'React-RCTSettings'
+    s.dependency 'React-RCTText'
+    s.dependency 'React-RCTVibration'
+    s.dependency 'React-Core/RCTWebSocket'
+
   end
