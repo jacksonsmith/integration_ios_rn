@@ -14,6 +14,7 @@ import {
   View,
   Text,
   StatusBar,
+  Image
 } from 'react-native';
 
 import {
@@ -23,7 +24,6 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
-
 const App: () => React$Node = () => {
   return (
     <>
