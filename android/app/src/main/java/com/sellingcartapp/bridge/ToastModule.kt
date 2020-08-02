@@ -1,4 +1,4 @@
-package com.sellingcartapp
+package com.sellingcartapp.bridge
 
 import android.widget.Toast
 import com.facebook.react.bridge.ReactApplicationContext

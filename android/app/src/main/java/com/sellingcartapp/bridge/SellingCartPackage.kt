@@ -1,4 +1,4 @@
-package com.sellingcartapp
+package com.sellingcartapp.bridge
 
 import android.view.View
 import com.facebook.react.ReactPackage
