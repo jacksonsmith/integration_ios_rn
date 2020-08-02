@@ -13,6 +13,6 @@ class ToastModule(
 
     @ReactMethod
     fun show(text: String) {
-        Toast.makeText(reactContext, "text", Toast.LENGTH_LONG).show()
+        Toast.makeText(reactContext, text, Toast.LENGTH_LONG).show()
     }
 }
