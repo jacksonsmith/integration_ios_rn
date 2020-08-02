@@ -16,7 +16,6 @@ import {
   Button,
   StatusBar,
   Image,
-  NativeModules,
 } from 'react-native';
 
 import {
@@ -26,6 +25,9 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import ToastModule from './ToastModule.js';
+
 const App: () => React$Node = () => {
   return (
     <>
@@ -43,13 +45,13 @@ const App: () => React$Node = () => {
           <View style={styles.body}>
             <Button
               onPress={() => {
-                NativeModules.ToastModule.show('short duration text', NativeModules.ToastModule.SHORT);
+                ToastModule.show('short duration text', ToastModule.SHORT);
               }}
               title="Press me to show short native toast"
             />
             <Button
               onPress={() => {
-                NativeModules.ToastModule.show('long duration text', NativeModules.ToastModule.LONG);
+                ToastModule.show('long duration text', ToastModule.LONG);
               }}
               title="Press me to show long native toast"
             />
