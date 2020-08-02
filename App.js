@@ -43,9 +43,15 @@ const App: () => React$Node = () => {
           <View style={styles.body}>
             <Button
               onPress={() => {
-                NativeModules.ToastModule.show('some text');
+                NativeModules.ToastModule.show('short duration text', NativeModules.ToastModule.SHORT);
               }}
-              title="Press me to show native toast"
+              title="Press me to show short native toast"
+            />
+            <Button
+              onPress={() => {
+                NativeModules.ToastModule.show('long duration text', NativeModules.ToastModule.LONG);
+              }}
+              title="Press me to show long native toast"
             />
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
