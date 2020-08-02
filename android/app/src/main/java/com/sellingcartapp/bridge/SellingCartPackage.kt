@@ -11,9 +11,10 @@ class SellingCartPackage : ReactPackage {
 
     override fun createNativeModules(
             reactContext: ReactApplicationContext
-    ): MutableList<NativeModule> {
-        return mutableListOf(ToastModule(reactContext))
-    }
+    ): MutableList<NativeModule> = mutableListOf(
+            ToastModule(reactContext),
+            RandomCallbackModule(reactContext)
+    )
 
     override fun createViewManagers(
             reactContext: ReactApplicationContext
