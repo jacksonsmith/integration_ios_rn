@@ -13,8 +13,10 @@ import {
   ScrollView,
   View,
   Text,
+  Button,
   StatusBar,
-  Image
+  Image,
+  NativeModules,
 } from 'react-native';
 
 import {
@@ -39,6 +41,12 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
+            <Button
+              onPress={() => {
+                NativeModules.ToastModule.show('some text');
+              }}
+              title="Press me to show native toast"
+            />
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
