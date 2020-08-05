@@ -6,15 +6,16 @@
  * @flow strict-local
  */
 
-import React from 'react';
+import React, { useState } from 'react';
 import {
   SafeAreaView,
   StyleSheet,
   ScrollView,
   View,
   Text,
+  Button,
   StatusBar,
-  Image
+  Image,
 } from 'react-native';
 
 import {
@@ -24,7 +25,13 @@ import {
   DebugInstructions,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
+
+import { ToastModule, CallbackModule } from './SellingCartModule.js';
+
 const App: () => React$Node = () => {
+
+  const [lastRequestText, setLastRequestText] = useState("");
+
   return (
     <>
       <StatusBar barStyle="dark-content" />
@@ -39,6 +46,32 @@ const App: () => React$Node = () => {
             </View>
           )}
           <View style={styles.body}>
+            <Button
+              onPress={() => {
+                ToastModule.show('short duration text', ToastModule.SHORT);
+              }}
+              title="Press me to show short native toast"
+            />
+            <Button
+              onPress={() => {
+                ToastModule.show('long duration text', ToastModule.LONG);
+              }}
+              title="Press me to show long native toast"
+            />
+            <Button
+              onPress={() => {
+                CallbackModule.request(
+                  (message) => {
+                    setLastRequestText('Success: ' + message);
+                  },
+                  (message) => {
+                    setLastRequestText('Error: ' + message);
+                  }
+                );
+              }}
+              title="Press me to execute native request"
+            />
+            <Text>{lastRequestText}</Text>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
